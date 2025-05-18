@@ -14,4 +14,6 @@ df_datos = pd.read_csv('datos.csv')
 #nulo_df = df_datos[df_datos["FECHA"].isnull()]
 #print(nulo_df)
 
-#Filtrado por índices
+# Agrupar por México y mes, y obtener la suma de contagios y muertes
+agrupado = df_datos.groupby('MES')[['CONTAGIOS', 'MUERTES']].sum().reset_index()
+print(agrupado.head())
