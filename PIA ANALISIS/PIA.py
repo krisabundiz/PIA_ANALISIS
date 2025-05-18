@@ -3,10 +3,15 @@ import pandas as pd
 
 df_datos = pd.read_csv('datos.csv')
 
-# Propone el esquema de filtrado más conveniente.
-
-# Filtrar solo registros de México
-mexico_df = df_datos[df_datos['PAÍS'] == 'MEXICO']
-print(mexico_df[["FECHA", "CONTAGIOS", "MUERTES", "PAÍS"]].head(10))
+# print(df_datos.head())
 
 
+# Filtrado de datos en un DataFrame de pandas
+#mexico_df = df_datos[df_datos['PAÍS'] == 'MEXICO']
+#print(mexico_df[["FECHA", "CONTAGIOS", "MUERTES", "PAÍS"]].head(10))
+
+# Filtrado por valores nulos
+#nulo_df = df_datos[df_datos["FECHA"].isnull()]
+#print(nulo_df)
+
+#Filtrado por índices
